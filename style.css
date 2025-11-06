@@ -1,0 +1,90 @@
+/*
+Menu-Lateral
+
+01- quando clicar nos botões: projetos, info-pessoal, contato,
+        Mudar a interface do site com novo conteúdo relacionado,
+        - como se estivesse girando um cubo na horizontal,
+        serão 3 lados de um cubos com conteudos diferentes.
+02- fazer uma animação de um universso girando devagar em baixo
+        do meu perfil.
+*/
+
+:root {
+    --font-cor-black: black;
+    --font-cor-white: white;
+    --font-padrao: Arial, Helvetica, sans-serif;
+    --font-especial: ;
+    --fundo-cor-claro01: #52499b;
+    --fundo-cor-claro02: #3e3b8a;
+    --fundo-cor-claro03: #292c79;
+    --fundo-cor-escuro02: #151e67;
+    --fundo-cor-escuro01: #000f56;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+}
+
+/*-----------Header----------*/
+
+.style-cabecalho {
+    padding: 0 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid var(--fundo-cor-escuro01);
+    background: linear-gradient(to bottom, var(--fundo-cor-escuro02), var(--fundo-cor-claro01));
+    z-index: 30;
+}
+
+/*-------Botão Menu Lateral------*/
+
+.style-btn-lateral {
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.style-btn-lateral:hover {
+    background-color: var(--fundo-cor-claro02);
+}
+
+.style-btn-lateral i {
+    color: var(--font-cor-white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/*efeito de click para colocar no java*/
+.onClick:active {
+    transform: scale(0.95);
+}
+
+/*------botão rede social------*/
+
+.style-btn-social {
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.style-btn-social:hover {
+    background-color: var(--fundo-cor-claro02);
+}
+
+.style-btn-social p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--font-cor-white);
+
+}
