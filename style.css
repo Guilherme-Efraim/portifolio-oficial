@@ -31,6 +31,10 @@ Menu-Lateral
     font-family: var(--font-padrao);
 }
 
+body {
+    overflow: hidden;
+}
+
 /*-----------Header----------*/
 
 .style-cabecalho {
@@ -107,6 +111,11 @@ Menu-Lateral
 
 }
 
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
 /*------Menu Lateral------*/
 
 .style-menu-lateral {
@@ -120,7 +129,7 @@ Menu-Lateral
     border: 2px solid black;
 }
 
-.menu-ativo {
+.menu-lateral-ativo {
     left: 5px;
 }
 
@@ -142,15 +151,20 @@ Menu-Lateral
 /*------Menu Redes Sociais------*/
 
 .style-menu-sociais {
-    /* height: 200px; */
+    width: 170px;
     position: absolute;
     top: 50px;
-    right: 5px;
+    right: -170px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     border: 2px solid black;
     border-radius: 30px;
+    overflow: hidden;
+}
+
+.menu-social-ativo {
+    right: 5px;
 }
 
 .box-titulo-sociais {
@@ -166,21 +180,21 @@ Menu-Lateral
 }
 
 .style-icons-sociais {
-    width: 250px;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
     gap: 10px;
 }
 
-.icones {
-    width: 80px;
-    height: 80px;
-    border: 2px solid black;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.style-icons-sociais a {
     text-decoration: none;
+    /* background-color: black; */
 }
+
+.style-icons-sociais a i {
+    font-size: 2rem;
+    /* color: white; */
+}
+ 

@@ -1,38 +1,19 @@
 const cabecalho = document.getElementById("cabecalho")
+
 const btnLateral = document.getElementById("btn-lateral")
+const menuLateral = document.getElementById("menu-lateral")
+const menuLateralAtivo = document.getElementsByClassName("menu-lateral-ativo")
+
 const btnSocial = document.getElementById("btn-social")
-
+const menuRedesSociais = document.getElementById("menu-redes-sociais")
+const menuSociaisAtivo = document.getElementsByClassName("menu-social-ativo ")
 const boxItemsSociais = document.getElementById("box-items-sociais")
-// const meusIcons = [...document.getElementsByClassName("meus-icons")]
 
-// cabecalho.addEventListener("click", (evt) => {
-//     const btnClicado = evt.target
+btnLateral.addEventListener("click", () => {
+    menuLateral.classList.toggle("menu-lateral-ativo")
+})
 
-//     if (btnClicado == btnLateral) {
-//         btnClicado.classList.add("onClick")
-//     } else if (btnClicado == btnSocial) {
-//         btnClicado.classList.add("onClick")
-//     }
-// })
+btnSocial.addEventListener("click", () => {
+    menuRedesSociais .classList.toggle("menu-social-ativo")
+})
 
-const redesSociais = ["Instagram", "GitHub", "Linkedin", "Facebook"]
-const iconsSociais = ["fa-brands fa-instagram", "fa-brands fa-facebook", "fa-brands fa-square-linkedin","fa-brands fa-github"]
-
-function adicionarItem(arr, addTo) {
-
-    arr.map((ele, posi) => {
-
-        const item = document.createElement("a")
-        item.setAttribute("href", "#")
-        item.setAttribute("id", "iconSocial" + posi)
-        item.setAttribute("class", "icones")
-
-        const icons = document.createElement("i")
-        icons.setAttribute("class", ele + "icon")
-
-        item.appendChild(icons)
-        addTo.appendChild(item)
-    })
-}
-console.log(boxItemsSociais)
-adicionarItem(iconsSociais, boxItemsSociais)
