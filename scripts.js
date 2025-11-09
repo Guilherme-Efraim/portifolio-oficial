@@ -6,14 +6,28 @@ const menuLateralAtivo = document.getElementsByClassName("menu-lateral-ativo")
 
 const btnSocial = document.getElementById("btn-social")
 const menuRedesSociais = document.getElementById("menu-redes-sociais")
-const menuSociaisAtivo = document.getElementsByClassName("menu-social-ativo ")
+const menuSociaisAtivo = document.getElementsByClassName("menu-social-ativo")
 const boxItemsSociais = document.getElementById("box-items-sociais")
 
-btnLateral.addEventListener("click", () => {
-    menuLateral.classList.toggle("menu-lateral-ativo")
-})
+function botaoClicado(botao, menu, clase){
+    botao.addEventListener("click", () => {
+        menu.classList.toggle(clase);
+    });
+}
 
-btnSocial.addEventListener("click", () => {
-    menuRedesSociais .classList.toggle("menu-social-ativo")
-})
+botaoClicado(btnLateral, menuLateral, "menu-lateral-ativo")
+botaoClicado(btnSocial, menuRedesSociais, "menu-social-ativo")
+
+
+
+
+
+
+// btnLateral.addEventListener("click", () => {
+//     menuLateral.classList.toggle("menu-lateral-ativo")
+// })
+
+// btnSocial.addEventListener("click", () => {
+//     menuRedesSociais .classList.toggle("menu-social-ativo")
+// })
 
